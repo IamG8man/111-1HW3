@@ -24,7 +24,30 @@
 
 ```csharp
 public void mt_getResult(){
-    ...
+   public partial class Test : System.Web.UI.Page f
+string[] = s_Vegetable = new string[2] {"蔬菜","水果"};
+    string[,] s_fruit = new string[2, 2]{{"A菜,“空心菜" },#{“番茄”,"火龍果}
+protected void Page_Load(object sender, Eventargs e) {
+        if { !IsPostBack} { }
+        for (int i_ct = 0; i_ct < A Vegetable.Length; i_Ct++)
+
+{
+            ListItem s_v = new ListItem();
+            s_V.Text = s_V.Value = s_Vegetable[i_ct];
+
+            dd1_category.Items.Add(s_v);
+        }
+        mt_GenSecondList();
+    }
+}
+        protected void mt_GenSecondList()
+{ 
+int i_ind = ddl_Category.SelectedIndex;
+        dd1_Food.Items.clear();
+for (int i_ct=0; i_ct<s_fruit.GetLength(1); i_ct++) { 
+ListItem s_V = new ListItem();
+        s_V.Text = s_V.Value = s_fruit[i_ind, i_ct];
+        }
 }
 ```
 
@@ -43,8 +66,9 @@ public void mt_getResult(){
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-        </div>
+        <div><asp:DropDownList ID="dd1_Category" runat="server"></asp:DropDownList>
+         <div><asp:DropDwonList ID="dd1_Food" runat="server"></asp:DropDwonList>
+        
     </form>
 </body>
 </html>
